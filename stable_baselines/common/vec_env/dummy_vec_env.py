@@ -115,3 +115,7 @@ class DummyVecEnv(VecEnv):
     def _get_target_envs(self, indices):
         indices = self._get_indices(indices)
         return [self.envs[i] for i in indices]
+    
+    def set_model(self, model):
+        self.model = model
+
